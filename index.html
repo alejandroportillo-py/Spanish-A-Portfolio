@@ -10,9 +10,6 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Three.js CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
     <!-- ==================== HEADER ==================== -->
@@ -23,13 +20,10 @@
                 <span></span>
                 <span></span>
             </button>
+            <div class="header-logo">
+                <img src="assets/icons/uwc-logo.png" alt="UWC Costa Rica Logo" class="uwc-logo">
+            </div>
             <h1 class="header-title">ESPAÑOL IB</h1>
-            <nav class="header-nav">
-                <a href="#" data-section="home">Inicio</a>
-                <a href="#" data-section="recursos">Recursos</a>
-                <a href="#" data-section="obras">Obras</a>
-                <a href="#" data-section="trabajos">Trabajos</a>
-            </nav>
         </div>
         <div class="header-contact">
             <span>UWC Costa Rica</span>
@@ -44,7 +38,7 @@
                 <div class="sidebar-logo">IB</div>
                 <div class="sidebar-brand">ESPAÑOL</div>
             </div>
-            <canvas id="globe-canvas"></canvas>
+            <canvas id="pencil-canvas"></canvas>
             <h2 class="sidebar-title">Carpeta Digital de Lengua y Literatura</h2>
             <p class="sidebar-subtitle">Diploma IB • UWC Costa Rica</p>
         </div>
@@ -127,11 +121,11 @@
     <main class="main-container">
         <!-- HERO SECTION -->
         <section class="hero" id="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">ESPAÑOL</h1>
-                <p class="hero-subtitle">Descubre obras literarias, análisis profundos y recursos del Bachillerato Internacional. Una carpeta digital completa para el programa de Lengua y Literatura Española en UWC Costa Rica.</p>
+            <div class="hero-content animate-fade-in">
+                <h1 class="hero-title animate-slide-up">ESPAÑOL</h1>
+                <p class="hero-subtitle animate-slide-up delay-1">Descubre obras literarias, análisis profundos y recursos del Bachillerato Internacional. Una carpeta digital completa para el programa de Lengua y Literatura Española en UWC Costa Rica.</p>
                 
-                <div class="hero-search-box">
+                <div class="hero-search-box animate-slide-up delay-2">
                     <select class="search-select" aria-label="Categoría">
                         <option>Todas</option>
                         <option>Obras Literarias</option>
@@ -151,8 +145,13 @@
                     </button>
                 </div>
                 
-                <a href="#" class="hero-cta" id="explore-btn">Explorar</a>
+                <a href="#" class="hero-cta animate-slide-up delay-3" id="explore-btn">Explorar</a>
             </div>
+            
+            <!-- Floating elements decoration -->
+            <div class="floating-decoration"></div>
+            <div class="floating-decoration delay-2"></div>
+            <div class="floating-decoration delay-4"></div>
         </section>
         
         <!-- CATALOG SECTION -->
@@ -250,12 +249,30 @@
                     </ul>
                 </div>
                 
+                <!-- Grid flexible de imágenes -->
                 <div class="content-images">
-                    <div class="image-upload-zone">
-                        <p class="upload-text">📁 Subir imagen de recursos</p>
-                        <p class="upload-hint">Arrastra imágenes aquí o haz clic para seleccionar</p>
-                        <!-- Aquí irían las imágenes reales: -->
-                        <!-- <img src="assets/images/recursos/guia-ib.jpg" alt="Guía del IB"> -->
+                    <h4>Galería de Recursos</h4>
+                    <div class="image-grid-flexible">
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📁 Imagen 1</p>
+                            <p class="upload-hint">Arrastra imagen aquí</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📁 Imagen 2</p>
+                            <p class="upload-hint">Arrastra imagen aquí</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📁 Imagen 3</p>
+                            <p class="upload-hint">Arrastra imagen aquí</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📁 Imagen 4</p>
+                            <p class="upload-hint">Arrastra imagen aquí</p>
+                        </div>
+                        <div class="image-upload-zone full-width">
+                            <p class="upload-text">📁 Imagen panorámica</p>
+                            <p class="upload-hint">Imagen de ancho completo</p>
+                        </div>
                     </div>
                 </div>
                 
@@ -266,7 +283,6 @@
                             <span class="doc-icon">📄</span>
                             <span class="doc-name">Guía IB Lengua A Literatura 2021.pdf</span>
                         </a>
-                        <!-- Más documentos aquí -->
                     </div>
                 </div>
             </div>
@@ -284,17 +300,25 @@
                     
                     <h4>Temas principales:</h4>
                     <ul>
-                        <li><strong>Narrador:</strong> Tipos (omnisciente, protagonista, testigo), punto de vista</li>
-                        <li><strong>Personajes:</strong> Caracterización directa e indirecta, evolución</li>
-                        <li><strong>Tiempo:</strong> Cronológico, analepsis, prolepsis, elipsis</li>
+                        <li><strong>Narrador:</strong> Tipos (omnisciente, protagonista, testigo)</li>
+                        <li><strong>Personajes:</strong> Caracterización directa e indirecta</li>
+                        <li><strong>Tiempo:</strong> Cronológico, analepsis, prolepsis</li>
                         <li><strong>Espacio:</strong> Físico, social, simbólico</li>
                     </ul>
                 </div>
                 
                 <div class="content-images">
-                    <div class="image-upload-zone">
-                        <p class="upload-text">📸 Subir esquemas o diagramas</p>
-                        <p class="upload-hint">Imágenes de apuntes, mapas conceptuales, etc.</p>
+                    <h4>Esquemas y Diagramas</h4>
+                    <div class="image-grid-flexible">
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📊 Diagrama 1</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📊 Diagrama 2</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📊 Diagrama 3</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -312,8 +336,20 @@
                 </div>
                 
                 <div class="content-images">
-                    <div class="image-upload-zone">
-                        <p class="upload-text">📝 Subir imágenes de trabajos</p>
+                    <h4>Trabajos Destacados</h4>
+                    <div class="image-grid-flexible">
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📝 Trabajo 1</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📝 Trabajo 2</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📝 Trabajo 3</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📝 Trabajo 4</p>
+                        </div>
                     </div>
                 </div>
                 
@@ -322,7 +358,7 @@
                     <div class="document-list">
                         <a href="assets/documents/docx/ensayo-1.docx" class="document-item">
                             <span class="doc-icon">📝</span>
-                            <span class="doc-name">Ensayo Comparativo - Obra 1 vs Obra 2.docx</span>
+                            <span class="doc-name">Ensayo Comparativo.docx</span>
                         </a>
                     </div>
                 </div>
@@ -341,8 +377,17 @@
                 </div>
                 
                 <div class="content-images">
-                    <div class="image-upload-zone">
-                        <p class="upload-text">🔬 Subir recursos de investigación</p>
+                    <h4>Proceso de Investigación</h4>
+                    <div class="image-grid-flexible">
+                        <div class="image-upload-zone">
+                            <p class="upload-text">🔬 Fase 1</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">🔬 Fase 2</p>
+                        </div>
+                        <div class="image-upload-zone full-width">
+                            <p class="upload-text">🔬 Resultados</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -367,24 +412,34 @@
                     </ul>
                     
                     <h4>Personajes clave:</h4>
-                    <p><strong>José Arcadio Buendía:</strong> Fundador de Macondo, obsesionado con la ciencia y los inventos.</p>
-                    <p><strong>Úrsula Iguarán:</strong> Matriarca que vive más de 100 años, columna vertebral de la familia.</p>
+                    <p><strong>José Arcadio Buendía:</strong> Fundador de Macondo, obsesionado con la ciencia.</p>
+                    <p><strong>Úrsula Iguarán:</strong> Matriarca que vive más de 100 años.</p>
                     <p><strong>Aureliano Buendía:</strong> Coronel que participa en 32 guerras civiles.</p>
                 </div>
                 
                 <div class="content-images">
-                    <div class="image-grid">
+                    <h4>Recursos Visuales</h4>
+                    <div class="image-grid-flexible">
                         <div class="image-upload-zone">
-                            <p class="upload-text">📚 Portada del libro</p>
-                            <p class="upload-hint">Sube la imagen de la portada</p>
-                            <!-- <img src="assets/images/obras/cien-anos-portada.jpg" alt="Portada"> -->
+                            <p class="upload-text">📚 Portada</p>
                         </div>
                         <div class="image-upload-zone">
-                            <p class="upload-text">🖼️ Árbol genealógico</p>
-                            <p class="upload-hint">Diagrama de la familia Buendía</p>
+                            <p class="upload-text">👥 Árbol genealógico</p>
                         </div>
                         <div class="image-upload-zone">
                             <p class="upload-text">📍 Mapa de Macondo</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">✍️ Citas importantes</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">🎨 Ilustraciones</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📖 Ediciones</p>
+                        </div>
+                        <div class="image-upload-zone full-width">
+                            <p class="upload-text">🖼️ Línea de tiempo narrativa</p>
                         </div>
                     </div>
                 </div>
@@ -413,35 +468,32 @@
             <div class="content-body">
                 <div class="content-text">
                     <h3 class="content-heading">Drama de la España Rural</h3>
-                    <p>Escrita en 1936, esta obra es un retrato de la represión en la España rural de principios del siglo XX.</p>
+                    <p>Escrita en 1936, esta obra es un retrato de la represión en la España rural.</p>
                     
                     <h4>Temas centrales:</h4>
                     <ul>
-                        <li><strong>Represión:</strong> De la sexualidad, la libertad, la individualidad</li>
-                        <li><strong>Honor:</strong> Obsesión por las apariencias sociales</li>
+                        <li><strong>Represión:</strong> De la sexualidad, la libertad</li>
+                        <li><strong>Honor:</strong> Obsesión por las apariencias</li>
                         <li><strong>Autoridad:</strong> Bernarda como figura tiránica</li>
-                        <li><strong>Mujer:</strong> Condición femenina en sociedad patriarcal</li>
+                        <li><strong>Mujer:</strong> Condición femenina</li>
                     </ul>
                 </div>
                 
                 <div class="content-images">
-                    <div class="image-grid">
+                    <h4>Material Visual</h4>
+                    <div class="image-grid-flexible">
                         <div class="image-upload-zone">
-                            <p class="upload-text">🎭 Portada obra</p>
+                            <p class="upload-text">🎭 Portada</p>
                         </div>
                         <div class="image-upload-zone">
                             <p class="upload-text">👥 Personajes</p>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="content-documents">
-                    <h4>Material de análisis:</h4>
-                    <div class="document-list">
-                        <a href="assets/documents/pdf/analisis-bernarda.pdf" class="document-item">
-                            <span class="doc-icon">📄</span>
-                            <span class="doc-name">Análisis La Casa de Bernarda Alba.pdf</span>
-                        </a>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">🏠 Escenografía</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📝 Análisis</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -455,7 +507,7 @@
             <div class="content-body">
                 <div class="content-text">
                     <h3 class="content-heading">Análisis Retórico</h3>
-                    <p>Estudio de la estructura argumentativa y recursos persuasivos en artículo de opinión.</p>
+                    <p>Estudio de la estructura argumentativa y recursos persuasivos.</p>
                     
                     <h4>Elementos analizados:</h4>
                     <ul>
@@ -467,8 +519,17 @@
                 </div>
                 
                 <div class="content-images">
-                    <div class="image-upload-zone">
-                        <p class="upload-text">📰 Captura del artículo</p>
+                    <h4>Material del Artículo</h4>
+                    <div class="image-grid-flexible">
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📰 Captura artículo</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📊 Esquema retórico</p>
+                        </div>
+                        <div class="image-upload-zone full-width">
+                            <p class="upload-text">✍️ Anotaciones</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -486,8 +547,14 @@
                 </div>
                 
                 <div class="content-images">
-                    <div class="image-upload-zone">
-                        <p class="upload-text">📖 Portada ensayo</p>
+                    <h4>Recursos</h4>
+                    <div class="image-grid-flexible">
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📖 Portada</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📝 Análisis</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -500,17 +567,27 @@
             
             <div class="content-body">
                 <div class="content-text">
-                    <h3 class="content-heading">Proyectos CAS relacionados con Literatura</h3>
+                    <h3 class="content-heading">Proyectos CAS</h3>
                     <p>Actividades que conectan el estudio de la lengua con la comunidad.</p>
                 </div>
                 
                 <div class="content-images">
-                    <div class="image-grid">
+                    <h4>Galería de Actividades</h4>
+                    <div class="image-grid-flexible">
                         <div class="image-upload-zone">
-                            <p class="upload-text">📸 Fotos de actividades</p>
+                            <p class="upload-text">📸 Actividad 1</p>
                         </div>
                         <div class="image-upload-zone">
-                            <p class="upload-text">🎨 Proyectos creativos</p>
+                            <p class="upload-text">📸 Actividad 2</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📸 Actividad 3</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">🎨 Proyecto creativo</p>
+                        </div>
+                        <div class="image-upload-zone full-width">
+                            <p class="upload-text">🎭 Evento cultural</p>
                         </div>
                     </div>
                 </div>
@@ -537,6 +614,21 @@
                     </ul>
                 </div>
                 
+                <div class="content-images">
+                    <h4>Proceso de Investigación</h4>
+                    <div class="image-grid-flexible">
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📋 Planificación</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📚 Fuentes</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">✍️ Borradores</p>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="content-documents">
                     <h4>Versiones del ensayo:</h4>
                     <div class="document-list">
@@ -561,8 +653,20 @@
                 </div>
                 
                 <div class="content-images">
-                    <div class="image-upload-zone">
-                        <p class="upload-text">🎤 Capturas de presentación</p>
+                    <h4>Material de Presentación</h4>
+                    <div class="image-grid-flexible">
+                        <div class="image-upload-zone">
+                            <p class="upload-text">🎤 Diapositiva 1</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">🎤 Diapositiva 2</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">🎤 Diapositiva 3</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">🎤 Diapositiva 4</p>
+                        </div>
                     </div>
                 </div>
                 
@@ -581,7 +685,7 @@
     </main>
     
     <!-- JavaScript -->
-    <script src="js/globe.js"></script>
+    <script src="js/pencil-animation.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
