@@ -8,11 +8,11 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    
     <!-- Three.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- ==================== HEADER ==================== -->
@@ -24,9 +24,9 @@
                 <span></span>
             </button>
             <div class="header-logo">
-                <img src="assets/icons/uwc-logo.png" alt="UWC Costa Rica Logo" class="uwc-logo">
+                <img src="assets/icons/ib-world-school-logo-1-colour.png" alt="UWC Costa Rica Logo" class="uwc-logo">
             </div>
-            <h1 class="header-title">ESPAÑOL IB</h1>
+            <h1 class="header-title">LENGUA Y LITERATURA ESPAÑOL</h1>
         </div>
         <div class="header-contact">
             <span>UWC Costa Rica</span>
@@ -38,12 +38,12 @@
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <div class="sidebar-logo-container">
-                <div class="sidebar-logo">IB</div>
+                <div class="sidebar-logo">SL</div>
                 <div class="sidebar-brand">ESPAÑOL</div>
             </div>
             <canvas id="globe-canvas"></canvas>
             <h2 class="sidebar-title">Carpeta Digital de Lengua y Literatura</h2>
-            <p class="sidebar-subtitle">Diploma IB • UWC Costa Rica</p>
+            <p class="sidebar-subtitle">Alejandro Portillo</p>
         </div>
         
         <nav>
@@ -124,21 +124,16 @@
     <main class="main-container">
         <!-- HERO SECTION -->
         <section class="hero" id="hero">
-            <!-- Particles container -->
-            <div class="particles-container" id="particles"></div>
-            
             <div class="hero-content animate-fade-in">
-                <!-- UWC Logo grande en hero -->
-                <div class="hero-logo-container">
-                    <img src="assets/icons/uwc-logo.png" alt="UWC Costa Rica" class="hero-uwc-logo">
+                <div class="hero-logo-uwc">
+                   <img src="assets/icons/uwc_international_white_logo.png" alt="UWC Costa Rica Logo" class="uwc-logo">
+                   
                 </div>
-                
                 <h1 class="hero-title animate-slide-up">ESPAÑOL</h1>
-                <p class="hero-subtitle animate-slide-up delay-1">Carpeta Digital de Lengua y Literatura</p>
-                <p class="hero-description animate-slide-up delay-2">Bachillerato Internacional • UWC Costa Rica</p>
+                <p class="hero-subtitle animate-slide-up delay-1">Descubre obras literarias, análisis profundos y recursos del Bachillerato Internacional. Una carpeta digital completa para el programa de Lengua y Literatura Española en UWC Costa Rica.</p>
             </div>
             
-            <!-- Decorative elements -->
+            <!-- Floating elements decoration -->
             <div class="floating-decoration"></div>
             <div class="floating-decoration delay-2"></div>
             <div class="floating-decoration delay-4"></div>
@@ -380,6 +375,10 @@
                             <span class="doc-icon">📄</span>
                             <span class="doc-name">Análisis Completo - Cien Años de Soledad.pdf</span>
                         </a>
+                        <a href="assets/documents/pdf/citas-importantes.pdf" class="document-item">
+                            <span class="doc-icon">📄</span>
+                            <span class="doc-name">Citas y Pasajes Importantes.pdf</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -611,7 +610,6 @@
     
     <!-- JavaScript -->
     <script src="js/globe.js"></script>
-    <script src="js/particles.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
