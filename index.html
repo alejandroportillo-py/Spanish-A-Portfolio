@@ -10,6 +10,9 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
     <!-- ==================== HEADER ==================== -->
@@ -38,7 +41,7 @@
                 <div class="sidebar-logo">IB</div>
                 <div class="sidebar-brand">ESPAÑOL</div>
             </div>
-            <canvas id="pencil-canvas"></canvas>
+            <canvas id="globe-canvas"></canvas>
             <h2 class="sidebar-title">Carpeta Digital de Lengua y Literatura</h2>
             <p class="sidebar-subtitle">Diploma IB • UWC Costa Rica</p>
         </div>
@@ -121,98 +124,24 @@
     <main class="main-container">
         <!-- HERO SECTION -->
         <section class="hero" id="hero">
+            <!-- Particles container -->
+            <div class="particles-container" id="particles"></div>
+            
             <div class="hero-content animate-fade-in">
-                <h1 class="hero-title animate-slide-up">ESPAÑOL</h1>
-                <p class="hero-subtitle animate-slide-up delay-1">Descubre obras literarias, análisis profundos y recursos del Bachillerato Internacional. Una carpeta digital completa para el programa de Lengua y Literatura Española en UWC Costa Rica.</p>
-                
-                <div class="hero-search-box animate-slide-up delay-2">
-                    <select class="search-select" aria-label="Categoría">
-                        <option>Todas</option>
-                        <option>Obras Literarias</option>
-                        <option>Obras No Literarias</option>
-                        <option>Trabajos</option>
-                        <option>Recursos</option>
-                    </select>
-                    <input 
-                        type="text" 
-                        class="search-input-main" 
-                        id="mainSearchInput"
-                        placeholder="Buscar obras, recursos, trabajos..." 
-                        aria-label="Buscar contenido"
-                    >
-                    <button class="search-btn" id="mainSearchBtn" aria-label="Buscar">
-                        Buscar
-                    </button>
+                <!-- UWC Logo grande en hero -->
+                <div class="hero-logo-container">
+                    <img src="assets/icons/uwc-logo.png" alt="UWC Costa Rica" class="hero-uwc-logo">
                 </div>
                 
-                <a href="#" class="hero-cta animate-slide-up delay-3" id="explore-btn">Explorar</a>
+                <h1 class="hero-title animate-slide-up">ESPAÑOL</h1>
+                <p class="hero-subtitle animate-slide-up delay-1">Carpeta Digital de Lengua y Literatura</p>
+                <p class="hero-description animate-slide-up delay-2">Bachillerato Internacional • UWC Costa Rica</p>
             </div>
             
-            <!-- Floating elements decoration -->
+            <!-- Decorative elements -->
             <div class="floating-decoration"></div>
             <div class="floating-decoration delay-2"></div>
             <div class="floating-decoration delay-4"></div>
-        </section>
-        
-        <!-- CATALOG SECTION -->
-        <section class="catalog-section" id="catalogSection" style="display: none;">
-            <div class="catalog-header">
-                <h2 class="catalog-title">Catálogo</h2>
-                <div class="catalog-filters">
-                    <div class="filter-group">
-                        <label class="filter-label">Categoría</label>
-                        <select class="filter-select">
-                            <option>Todas</option>
-                            <option>Obras Literarias</option>
-                            <option>Obras No Literarias</option>
-                            <option>Trabajos</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label class="filter-label">Tipo</label>
-                        <select class="filter-select">
-                            <option>Todos</option>
-                            <option>Novela</option>
-                            <option>Teatro</option>
-                            <option>Ensayo</option>
-                            <option>Artículo</option>
-                        </select>
-                    </div>
-                    <button class="filter-btn">Aplicar Filtros</button>
-                </div>
-            </div>
-            
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-image">
-                        <span class="card-badge">Obra Literaria</span>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Cien Años de Soledad</h3>
-                        <p class="card-text">Gabriel García Márquez • Análisis completo del realismo mágico</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                        <span class="card-badge">Obra Literaria</span>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">La Casa de Bernarda Alba</h3>
-                        <p class="card-text">Federico García Lorca • Estudio dramático y social</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                        <span class="card-badge">Recursos</span>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Guías del IB</h3>
-                        <p class="card-text">Material oficial del programa Lengua y Literatura</p>
-                    </div>
-                </div>
-            </div>
-            
-            <a href="#" class="show-more-btn">Mostrar Más</a>
         </section>
         
         <!-- SEARCH RESULTS -->
@@ -451,10 +380,6 @@
                             <span class="doc-icon">📄</span>
                             <span class="doc-name">Análisis Completo - Cien Años de Soledad.pdf</span>
                         </a>
-                        <a href="assets/documents/pdf/citas-importantes.pdf" class="document-item">
-                            <span class="doc-icon">📄</span>
-                            <span class="doc-name">Citas y Pasajes Importantes.pdf</span>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -685,7 +610,8 @@
     </main>
     
     <!-- JavaScript -->
-    <script src="js/pencil-animation.js"></script>
+    <script src="js/globe.js"></script>
+    <script src="js/particles.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
