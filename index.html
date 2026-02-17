@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpeta Digital de Español - IB UWC Costa Rica</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <div class="header-left">
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <h1 class="header-title">ESPAÑOL IB</h1>
+            <nav class="header-nav">
+                <a href="#" data-section="home">Inicio</a>
+                <a href="#" data-section="recursos">Recursos</a>
+                <a href="#" data-section="obras">Obras</a>
+                <a href="#" data-section="trabajos">Trabajos</a>
+            </nav>
+        </div>
+        <div class="header-contact">
+            <span>UWC Costa Rica</span>
+            <strong>Bachillerato Internacional</strong>
+        </div>
+    </header>
+    
+    <!-- ==================== SIDEBAR ==================== -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo-container">
+                <div class="sidebar-logo">IB</div>
+                <div class="sidebar-brand">ESPAÑOL</div>
+            </div>
+            <canvas id="globe-canvas"></canvas>
+            <h2 class="sidebar-title">Carpeta Digital de Lengua y Literatura</h2>
+            <p class="sidebar-subtitle">Diploma IB • UWC Costa Rica</p>
+        </div>
+        
+        <nav>
+            <ul class="menu" role="menu">
+                <li class="menu-item">
+                    <a class="menu-link" data-toggle="teoria" role="menuitem">
+                        <span>1. Teoría</span>
+                        <span class="menu-icon">▶</span>
+                    </a>
+                    <ul class="submenu" id="teoria">
+                        <li><a class="menu-link" data-section="recursos" role="menuitem">1.1 Recursos</a></li>
+                        <li><a class="menu-link" data-section="apuntes" role="menuitem">1.2 Apuntes</a></li>
+                    </ul>
+                </li>
+                
+                <li class="menu-item">
+                    <a class="menu-link" data-toggle="trabajos" role="menuitem">
+                        <span>2. Trabajos</span>
+                        <span class="menu-icon">▶</span>
+                    </a>
+                    <ul class="submenu" id="trabajos">
+                        <li><a class="menu-link" data-section="trabajos-clase" role="menuitem">2.1 Trabajos en Clase</a></li>
+                        <li><a class="menu-link" data-section="investigacion" role="menuitem">2.2 Investigación Personal</a></li>
+                    </ul>
+                </li>
+                
+                <li class="menu-item">
+                    <a class="menu-link" data-toggle="obras" role="menuitem">
+                        <span>3. Obras Analizadas</span>
+                        <span class="menu-icon">▶</span>
+                    </a>
+                    <ul class="submenu" id="obras">
+                        <li class="menu-item">
+                            <a class="menu-link" data-toggle="literarias" role="menuitem">
+                                <span>3.1 Obras Literarias</span>
+                                <span class="menu-icon">▶</span>
+                            </a>
+                            <ul class="submenu" id="literarias">
+                                <li><a class="menu-link" data-section="literaria-1" role="menuitem">3.1.1 Cien Años de Soledad</a></li>
+                                <li><a class="menu-link" data-section="literaria-2" role="menuitem">3.1.2 La Casa de Bernarda Alba</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" data-toggle="no-literarias" role="menuitem">
+                                <span>3.2 Obras No Literarias</span>
+                                <span class="menu-icon">▶</span>
+                            </a>
+                            <ul class="submenu" id="no-literarias">
+                                <li><a class="menu-link" data-section="no-literaria-1" role="menuitem">3.2.1 Artículo NYT</a></li>
+                                <li><a class="menu-link" data-section="no-literaria-2" role="menuitem">3.2.2 Ensayo Paz</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="menu-item">
+                    <a class="menu-link" data-section="actividades" role="menuitem">
+                        <span>4. Actividades Experienciales</span>
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a class="menu-link" data-section="extended-essay" role="menuitem">
+                        <span>5. Extended Essay</span>
+                    </a>
+                </li>
+                
+                <li class="menu-item">
+                    <a class="menu-link" data-section="exposiciones" role="menuitem">
+                        <span>6. Exposiciones Orales</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="main-container">
+        <!-- HERO SECTION -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">ESPAÑOL</h1>
+                <p class="hero-subtitle">Descubre obras literarias, análisis profundos y recursos del Bachillerato Internacional. Una carpeta digital completa para el programa de Lengua y Literatura Española en UWC Costa Rica.</p>
+                
+                <div class="hero-search-box">
+                    <select class="search-select" aria-label="Categoría">
+                        <option>Todas</option>
+                        <option>Obras Literarias</option>
+                        <option>Obras No Literarias</option>
+                        <option>Trabajos</option>
+                        <option>Recursos</option>
+                    </select>
+                    <input 
+                        type="text" 
+                        class="search-input-main" 
+                        id="mainSearchInput"
+                        placeholder="Buscar obras, recursos, trabajos..." 
+                        aria-label="Buscar contenido"
+                    >
+                    <button class="search-btn" id="mainSearchBtn" aria-label="Buscar">
+                        Buscar
+                    </button>
+                </div>
+                
+                <a href="#" class="hero-cta" id="explore-btn">Explorar</a>
+            </div>
+        </section>
+        
+        <!-- CATALOG SECTION -->
+        <section class="catalog-section" id="catalogSection" style="display: none;">
+            <div class="catalog-header">
+                <h2 class="catalog-title">Catálogo</h2>
+                <div class="catalog-filters">
+                    <div class="filter-group">
+                        <label class="filter-label">Categoría</label>
+                        <select class="filter-select">
+                            <option>Todas</option>
+                            <option>Obras Literarias</option>
+                            <option>Obras No Literarias</option>
+                            <option>Trabajos</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Tipo</label>
+                        <select class="filter-select">
+                            <option>Todos</option>
+                            <option>Novela</option>
+                            <option>Teatro</option>
+                            <option>Ensayo</option>
+                            <option>Artículo</option>
+                        </select>
+                    </div>
+                    <button class="filter-btn">Aplicar Filtros</button>
+                </div>
+            </div>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-image">
+                        <span class="card-badge">Obra Literaria</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Cien Años de Soledad</h3>
+                        <p class="card-text">Gabriel García Márquez • Análisis completo del realismo mágico</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <span class="card-badge">Obra Literaria</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">La Casa de Bernarda Alba</h3>
+                        <p class="card-text">Federico García Lorca • Estudio dramático y social</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <span class="card-badge">Recursos</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Guías del IB</h3>
+                        <p class="card-text">Material oficial del programa Lengua y Literatura</p>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#" class="show-more-btn">Mostrar Más</a>
+        </section>
+        
+        <!-- SEARCH RESULTS -->
+        <section class="search-results-section" id="searchResults">
+            <div class="search-results-header">
+                <h2 class="search-results-title">Resultados de búsqueda</h2>
+                <p class="search-results-count" id="resultsCount"></p>
+            </div>
+            <div class="search-results-grid" id="resultsGrid"></div>
+            <div class="no-results" id="noResults" style="display: none;">
+                <div class="no-results-icon">🔍</div>
+                <h3>No se encontraron resultados</h3>
+                <p>Intenta con otros términos de búsqueda</p>
+            </div>
+        </section>
+        
+        <!-- CONTENT SECTIONS -->
+        
+        <!-- 1.1 Recursos -->
+        <section class="content-section" id="recursos">
+            <h2 class="section-title">Recursos</h2>
+            <p class="section-subtitle">Materiales y herramientas para el estudio de Lengua y Literatura</p>
+            
+            <div class="content-body">
+                <div class="content-text">
+                    <h3 class="content-heading">Guías del Bachillerato Internacional</h3>
+                    <p>Material oficial del IB para el programa de Lengua y Literatura en español.</p>
+                    
+                    <h4>Documentos principales:</h4>
+                    <ul>
+                        <li>Guía de Lengua A: Literatura (2021)</li>
+                        <li>Criterios de evaluación interna y externa</li>
+                        <li>Ejemplares de trabajos con comentarios</li>
+                    </ul>
+                </div>
+                
+                <div class="content-images">
+                    <div class="image-upload-zone">
+                        <p class="upload-text">📁 Subir imagen de recursos</p>
+                        <p class="upload-hint">Arrastra imágenes aquí o haz clic para seleccionar</p>
+                        <!-- Aquí irían las imágenes reales: -->
+                        <!-- <img src="assets/images/recursos/guia-ib.jpg" alt="Guía del IB"> -->
+                    </div>
+                </div>
+                
+                <div class="content-documents">
+                    <h4>Documentos adjuntos:</h4>
+                    <div class="document-list">
+                        <a href="assets/documents/pdf/guia-ib-2021.pdf" class="document-item" target="_blank">
+                            <span class="doc-icon">📄</span>
+                            <span class="doc-name">Guía IB Lengua A Literatura 2021.pdf</span>
+                        </a>
+                        <!-- Más documentos aquí -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 1.2 Apuntes -->
+        <section class="content-section" id="apuntes">
+            <h2 class="section-title">Apuntes</h2>
+            <p class="section-subtitle">Notas de clase y resúmenes teóricos</p>
+            
+            <div class="content-body">
+                <div class="content-text">
+                    <h3 class="content-heading">Teoría Literaria</h3>
+                    <p>Conceptos fundamentales para el análisis de textos literarios.</p>
+                    
+                    <h4>Temas principales:</h4>
+                    <ul>
+                        <li><strong>Narrador:</strong> Tipos (omnisciente, protagonista, testigo), punto de vista</li>
+                        <li><strong>Personajes:</strong> Caracterización directa e indirecta, evolución</li>
+                        <li><strong>Tiempo:</strong> Cronológico, analepsis, prolepsis, elipsis</li>
+                        <li><strong>Espacio:</strong> Físico, social, simbólico</li>
+                    </ul>
+                </div>
+                
+                <div class="content-images">
+                    <div class="image-upload-zone">
+                        <p class="upload-text">📸 Subir esquemas o diagramas</p>
+                        <p class="upload-hint">Imágenes de apuntes, mapas conceptuales, etc.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 2.1 Trabajos en Clase -->
+        <section class="content-section" id="trabajos-clase">
+            <h2 class="section-title">Trabajos en Clase</h2>
+            <p class="section-subtitle">Actividades y ejercicios realizados durante el curso</p>
+            
+            <div class="content-body">
+                <div class="content-text">
+                    <h3 class="content-heading">Ensayos y Análisis</h3>
+                    <p>Colección de trabajos escritos durante las clases.</p>
+                </div>
+                
+                <div class="content-images">
+                    <div class="image-upload-zone">
+                        <p class="upload-text">📝 Subir imágenes de trabajos</p>
+                    </div>
+                </div>
+                
+                <div class="content-documents">
+                    <h4>Trabajos subidos:</h4>
+                    <div class="document-list">
+                        <a href="assets/documents/docx/ensayo-1.docx" class="document-item">
+                            <span class="doc-icon">📝</span>
+                            <span class="doc-name">Ensayo Comparativo - Obra 1 vs Obra 2.docx</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 2.2 Investigación Personal -->
+        <section class="content-section" id="investigacion">
+            <h2 class="section-title">Investigación Personal</h2>
+            <p class="section-subtitle">Proyectos de investigación individual</p>
+            
+            <div class="content-body">
+                <div class="content-text">
+                    <h3 class="content-heading">Proyecto de Investigación</h3>
+                    <p>Investigación profunda sobre un tema literario específico.</p>
+                </div>
+                
+                <div class="content-images">
+                    <div class="image-upload-zone">
+                        <p class="upload-text">🔬 Subir recursos de investigación</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 3.1.1 Obra Literaria 1 -->
+        <section class="content-section" id="literaria-1">
+            <h2 class="section-title">Cien Años de Soledad</h2>
+            <p class="section-subtitle">Gabriel García Márquez - Análisis y reflexiones</p>
+            
+            <div class="content-body">
+                <div class="content-text">
+                    <h3 class="content-heading">Contexto Histórico y Literario</h3>
+                    <p>Publicada en 1967, "Cien Años de Soledad" es la obra cumbre de Gabriel García Márquez y del realismo mágico latinoamericano.</p>
+                    
+                    <h4>Temas principales:</h4>
+                    <ul>
+                        <li><strong>Soledad:</strong> Como condición existencial de los Buendía</li>
+                        <li><strong>Tiempo cíclico:</strong> La historia que se repite</li>
+                        <li><strong>Realismo mágico:</strong> Fusión de lo real y lo fantástico</li>
+                        <li><strong>Macondo:</strong> Microcosmos de América Latina</li>
+                    </ul>
+                    
+                    <h4>Personajes clave:</h4>
+                    <p><strong>José Arcadio Buendía:</strong> Fundador de Macondo, obsesionado con la ciencia y los inventos.</p>
+                    <p><strong>Úrsula Iguarán:</strong> Matriarca que vive más de 100 años, columna vertebral de la familia.</p>
+                    <p><strong>Aureliano Buendía:</strong> Coronel que participa en 32 guerras civiles.</p>
+                </div>
+                
+                <div class="content-images">
+                    <div class="image-grid">
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📚 Portada del libro</p>
+                            <p class="upload-hint">Sube la imagen de la portada</p>
+                            <!-- <img src="assets/images/obras/cien-anos-portada.jpg" alt="Portada"> -->
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">🖼️ Árbol genealógico</p>
+                            <p class="upload-hint">Diagrama de la familia Buendía</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📍 Mapa de Macondo</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-documents">
+                    <h4>Análisis y recursos:</h4>
+                    <div class="document-list">
+                        <a href="assets/documents/pdf/analisis-cien-anos.pdf" class="document-item">
+                            <span class="doc-icon">📄</span>
+                            <span class="doc-name">Análisis Completo - Cien Años de Soledad.pdf</span>
+                        </a>
+                        <a href="assets/documents/pdf/citas-importantes.pdf" class="document-item">
+                            <span class="doc-icon">📄</span>
+                            <span class="doc-name">Citas y Pasajes Importantes.pdf</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 3.1.2 Obra Literaria 2 -->
+        <section class="content-section" id="literaria-2">
+            <h2 class="section-title">La Casa de Bernarda Alba</h2>
+            <p class="section-subtitle">Federico García Lorca - Análisis dramático</p>
+            
+            <div class="content-body">
+                <div class="content-text">
+                    <h3 class="content-heading">Drama de la España Rural</h3>
+                    <p>Escrita en 1936, esta obra es un retrato de la represión en la España rural de principios del siglo XX.</p>
+                    
+                    <h4>Temas centrales:</h4>
+                    <ul>
+                        <li><strong>Represión:</strong> De la sexualidad, la libertad, la individualidad</li>
+                        <li><strong>Honor:</strong> Obsesión por las apariencias sociales</li>
+                        <li><strong>Autoridad:</strong> Bernarda como figura tiránica</li>
+                        <li><strong>Mujer:</strong> Condición femenina en sociedad patriarcal</li>
+                    </ul>
+                </div>
+                
+                <div class="content-images">
+                    <div class="image-grid">
+                        <div class="image-upload-zone">
+                            <p class="upload-text">🎭 Portada obra</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">👥 Personajes</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-documents">
+                    <h4>Material de análisis:</h4>
+                    <div class="document-list">
+                        <a href="assets/documents/pdf/analisis-bernarda.pdf" class="document-item">
+                            <span class="doc-icon">📄</span>
+                            <span class="doc-name">Análisis La Casa de Bernarda Alba.pdf</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 3.2.1 Obra No Literaria 1 -->
+        <section class="content-section" id="no-literaria-1">
+            <h2 class="section-title">Artículo NYT</h2>
+            <p class="section-subtitle">Análisis de texto periodístico</p>
+            
+            <div class="content-body">
+                <div class="content-text">
+                    <h3 class="content-heading">Análisis Retórico</h3>
+                    <p>Estudio de la estructura argumentativa y recursos persuasivos en artículo de opinión.</p>
+                    
+                    <h4>Elementos analizados:</h4>
+                    <ul>
+                        <li>Tesis y argumentos principales</li>
+                        <li>Recursos retóricos (ethos, pathos, logos)</li>
+                        <li>Audiencia objetivo</li>
+                        <li>Propósito comunicativo</li>
+                    </ul>
+                </div>
+                
+                <div class="content-images">
+                    <div class="image-upload-zone">
+                        <p class="upload-text">📰 Captura del artículo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 3.2.2 Obra No Literaria 2 -->
+        <section class="content-section" id="no-literaria-2">
+            <h2 class="section-title">Ensayo de Octavio Paz</h2>
+            <p class="section-subtitle">Análisis de texto ensayístico</p>
+            
+            <div class="content-body">
+                <div class="content-text">
+                    <h3 class="content-heading">El Laberinto de la Soledad</h3>
+                    <p>Ensayo sobre la identidad mexicana y latinoamericana.</p>
+                </div>
+                
+                <div class="content-images">
+                    <div class="image-upload-zone">
+                        <p class="upload-text">📖 Portada ensayo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 4. Actividades Experienciales -->
+        <section class="content-section" id="actividades">
+            <h2 class="section-title">Actividades Experienciales</h2>
+            <p class="section-subtitle">Aprendizaje a través de la experiencia</p>
+            
+            <div class="content-body">
+                <div class="content-text">
+                    <h3 class="content-heading">Proyectos CAS relacionados con Literatura</h3>
+                    <p>Actividades que conectan el estudio de la lengua con la comunidad.</p>
+                </div>
+                
+                <div class="content-images">
+                    <div class="image-grid">
+                        <div class="image-upload-zone">
+                            <p class="upload-text">📸 Fotos de actividades</p>
+                        </div>
+                        <div class="image-upload-zone">
+                            <p class="upload-text">🎨 Proyectos creativos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 5. Extended Essay -->
+        <section class="content-section" id="extended-essay">
+            <h2 class="section-title">Extended Essay</h2>
+            <p class="section-subtitle">Monografía de investigación</p>
+            
+            <div class="content-body">
+                <div class="content-text">
+                    <h3 class="content-heading">Pregunta de Investigación</h3>
+                    <p>[Escribe aquí tu pregunta de investigación]</p>
+                    
+                    <h4>Estructura:</h4>
+                    <ul>
+                        <li>Introducción</li>
+                        <li>Metodología</li>
+                        <li>Desarrollo</li>
+                        <li>Conclusión</li>
+                        <li>Bibliografía</li>
+                    </ul>
+                </div>
+                
+                <div class="content-documents">
+                    <h4>Versiones del ensayo:</h4>
+                    <div class="document-list">
+                        <a href="assets/documents/docx/ee-borrador.docx" class="document-item">
+                            <span class="doc-icon">📝</span>
+                            <span class="doc-name">Extended Essay - Borrador.docx</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 6. Exposiciones Orales -->
+        <section class="content-section" id="exposiciones">
+            <h2 class="section-title">Exposiciones Orales</h2>
+            <p class="section-subtitle">Presentaciones y evaluaciones orales</p>
+            
+            <div class="content-body">
+                <div class="content-text">
+                    <h3 class="content-heading">Individual Oral</h3>
+                    <p>Análisis oral de obras literarias y no literarias.</p>
+                </div>
+                
+                <div class="content-images">
+                    <div class="image-upload-zone">
+                        <p class="upload-text">🎤 Capturas de presentación</p>
+                    </div>
+                </div>
+                
+                <div class="content-documents">
+                    <h4>Materiales:</h4>
+                    <div class="document-list">
+                        <a href="assets/documents/pdf/guion-oral.pdf" class="document-item">
+                            <span class="doc-icon">📄</span>
+                            <span class="doc-name">Guión Exposición Oral.pdf</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- JavaScript -->
+    <script src="js/globe.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
