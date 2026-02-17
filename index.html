@@ -48,6 +48,8 @@
         
         <nav>
             <ul class="menu" role="menu">
+
+                <!-- 1. Teoría -->
                 <li class="menu-item">
                     <a class="menu-link" data-toggle="teoria" role="menuitem">
                         <span>1. Teoría</span>
@@ -59,6 +61,7 @@
                     </ul>
                 </li>
                 
+                <!-- 2. Trabajos -->
                 <li class="menu-item">
                     <a class="menu-link" data-toggle="trabajos" role="menuitem">
                         <span>2. Trabajos</span>
@@ -70,6 +73,7 @@
                     </ul>
                 </li>
                 
+                <!-- 3. Obras Analizadas -->
                 <li class="menu-item">
                     <a class="menu-link" data-toggle="obras" role="menuitem">
                         <span>3. Obras Analizadas</span>
@@ -99,30 +103,46 @@
                     </ul>
                 </li>
                 
+                <!-- 4. Actividades Experienciales — con submenús desplegables -->
                 <li class="menu-item">
-                    <a class="menu-link" data-section="actividades" role="menuitem">
+                    <a class="menu-link" data-toggle="actividades-menu" role="menuitem">
                         <span>4. Actividades Experienciales</span>
+                        <span class="menu-icon">▶</span>
                     </a>
+                    <ul class="submenu" id="actividades-menu">
+                        <li><a class="menu-link" data-section="actividad-1" role="menuitem">4.1 Actividad Experiencial 1</a></li>
+                        <li><a class="menu-link" data-section="actividad-2" role="menuitem">4.2 Actividad Experiencial 2</a></li>
+                        <li><a class="menu-link" data-section="actividad-3" role="menuitem">4.3 Actividad Experiencial 3</a></li>
+                    </ul>
                 </li>
                 
+                <!-- 5. Extended Essay -->
                 <li class="menu-item">
                     <a class="menu-link" data-section="extended-essay" role="menuitem">
                         <span>5. Extended Essay</span>
                     </a>
                 </li>
                 
+                <!-- 6. Exposiciones Orales — con submenús desplegables -->
                 <li class="menu-item">
-                    <a class="menu-link" data-section="exposiciones" role="menuitem">
+                    <a class="menu-link" data-toggle="exposiciones-menu" role="menuitem">
                         <span>6. Exposiciones Orales</span>
+                        <span class="menu-icon">▶</span>
                     </a>
+                    <ul class="submenu" id="exposiciones-menu">
+                        <li><a class="menu-link" data-section="exposicion-1" role="menuitem">6.1 La Guerra del Fuego</a></li>
+                        <li><a class="menu-link" data-section="exposicion-2" role="menuitem">6.2 Del Latin al Italiano</a></li>
+                    </ul>
                 </li>
+
             </ul>
         </nav>
     </aside>
     
     <!-- ==================== MAIN CONTENT ==================== -->
     <main class="main-container">
-        <!-- HERO SECTION -->
+
+        <!-- ===== HERO ===== -->
         <section class="hero" id="hero">
             <div class="hero-content animate-fade-in">
                 <div class="hero-logo-uwc">
@@ -131,39 +151,21 @@
                 <h1 class="hero-title animate-slide-up">ESPAÑOL</h1>
                 <p class="hero-subtitle animate-slide-up delay-1">Descubre obras literarias, análisis profundos y recursos del Bachillerato Internacional. Una carpeta digital completa para el programa de Lengua y Literatura Española en UWC Costa Rica.</p>
             </div>
-            
-            <!-- Floating elements decoration -->
             <div class="floating-decoration"></div>
             <div class="floating-decoration delay-2"></div>
             <div class="floating-decoration delay-4"></div>
         </section>
         
-        <!-- SEARCH RESULTS -->
-        <section class="search-results-section" id="searchResults">
-            <div class="search-results-header">
-                <h2 class="search-results-title">Resultados de búsqueda</h2>
-                <p class="search-results-count" id="resultsCount"></p>
-            </div>
-            <div class="search-results-grid" id="resultsGrid"></div>
-            <div class="no-results" id="noResults" style="display: none;">
-                <div class="no-results-icon">🔍</div>
-                <h3>No se encontraron resultados</h3>
-                <p>Intenta con otros términos de búsqueda</p>
-            </div>
-        </section>
-        
-        <!-- CONTENT SECTIONS -->
-        
-        <!-- 1.1 Recursos -->
+        <!-- ============================== -->
+        <!--   1.1  RECURSOS               -->
+        <!-- ============================== -->
         <section class="content-section" id="recursos">
             <h2 class="section-title">Recursos</h2>
             <p class="section-subtitle">Materiales y herramientas para el estudio de Lengua y Literatura</p>
-            
             <div class="content-body">
                 <div class="content-text">
                     <h3 class="content-heading">Guías del Bachillerato Internacional</h3>
                     <p>Material oficial del IB para el programa de Lengua y Literatura en español.</p>
-                    
                     <h4>Documentos principales:</h4>
                     <ul>
                         <li>Guía de Lengua A: Literatura (2021)</li>
@@ -171,161 +173,124 @@
                         <li>Ejemplares de trabajos con comentarios</li>
                     </ul>
                 </div>
-                
-                <!-- Grid flexible de imágenes -->
                 <div class="content-images">
                     <h4>Galería de Recursos</h4>
                     <div class="image-grid-flexible">
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📁 Imagen 1</p>
-                            <p class="upload-hint">Arrastra imagen aquí</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📁 Imagen 2</p>
-                            <p class="upload-hint">Arrastra imagen aquí</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📁 Imagen 3</p>
-                            <p class="upload-hint">Arrastra imagen aquí</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📁 Imagen 4</p>
-                            <p class="upload-hint">Arrastra imagen aquí</p>
-                        </div>
-                        <div class="image-upload-zone full-width">
-                            <p class="upload-text">📁 Imagen panorámica</p>
-                            <p class="upload-hint">Imagen de ancho completo</p>
-                        </div>
+                        <div class="image-upload-zone"><p class="upload-text">📁 Imagen 1</p><p class="upload-hint">Arrastra imagen aquí</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📁 Imagen 2</p><p class="upload-hint">Arrastra imagen aquí</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📁 Imagen 3</p><p class="upload-hint">Arrastra imagen aquí</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📁 Imagen 4</p><p class="upload-hint">Arrastra imagen aquí</p></div>
+                        <div class="image-upload-zone full-width"><p class="upload-text">📁 Imagen panorámica</p><p class="upload-hint">Imagen de ancho completo</p></div>
                     </div>
                 </div>
-                
                 <div class="content-documents">
                     <h4>Documentos adjuntos:</h4>
                     <div class="document-list">
                         <a href="assets/documents/pdf/guia-ib-2021.pdf" class="document-item" target="_blank">
-                            <span class="doc-icon">📄</span>
-                            <span class="doc-name">Guía IB Lengua A Literatura 2021.pdf</span>
+                            <span class="doc-icon">📄</span><span class="doc-name">Guía IB Lengua A Literatura 2021.pdf</span>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- 1.2 Apuntes -->
+        <!-- ============================== -->
+        <!--   1.2  APUNTES                -->
+        <!-- ============================== -->
         <section class="content-section" id="apuntes">
             <h2 class="section-title">Apuntes</h2>
             <p class="section-subtitle">Notas de clase y resúmenes teóricos</p>
-            
             <div class="content-body">
                 <div class="content-text">
-                    <h3 class="content-heading">Teoría Literaria</h3>
-                    <p>Conceptos fundamentales para el análisis de textos literarios.</p>
-                    
-                    <h4>Temas principales:</h4>
+                    <h3 class="content-heading">Módulo 1: El Lenguaje Introducción a la Lingüística</h3>
+                    <p>Ferdinand de Saussure y el Estructuralismo: Propone una nueva concepción de los hechos del lenguaje, considerándolos como un sistema en el cual los diversos elementos que lo integran ofrecen entre sí una relación de solidaridad y dependencia tal que forman una estructura.</p>
+                    <h4>Términos Fundamentales</h4>
                     <ul>
-                        <li><strong>Narrador:</strong> Tipos (omnisciente, protagonista, testigo)</li>
-                        <li><strong>Personajes:</strong> Caracterización directa e indirecta</li>
-                        <li><strong>Tiempo:</strong> Cronológico, analepsis, prolepsis</li>
-                        <li><strong>Espacio:</strong> Físico, social, simbólico</li>
+                        <li><strong>Significado: </strong>Idea de la cosa; la idea que se nos viene a la cabeza cuando decimos una palabra, aquello a lo que nos estamos refiriendo dentro de nuestro mundo real cuando hablamos.</li>
+                        <li><strong>Significante: </strong>La palabra en sí misma; conjunto de signos lingüísticos (fonemas y morfemas) que usamos para poder comunicarnos con el resto de las personas. El significante es la herramienta que usamos de forma verbal o escrita para poder remitir una idea, un concepto a la persona que recibirá (el receptor) la información.</li>
+                        <li><strong>Lengua: </strong>Es el código constituido por signos lingüísticos y reglas de combinación, es decir, el sistema (abstracto).</li>
+                        <li><strong>Habla: </strong>Es un acto particular (concreto) materializado por el emisor que cifra un mensaje utilizando el código lingüístico, esto es, el sistema.</li>
+                        <li><strong>Sincronía: </strong>Se refiere al estudio de la lengua en su estado actual.</li>
+                        <li><strong>Diacronía: </strong>Se refiere al estudio de la lengua desde una perspectiva histórica y evolutiva.</li>
+                        <li><strong>Lingüística Interna: </strong>Estudia las lenguas en sí mismas.</li>
+                        <li><strong>Lingüística Externa: </strong>Se encarga de estudiar el componente social de las lenguas.</li>
+                        <li><strong>Relaciones Sintagmáticas: </strong>Son las que se dan en el discurso; las palabras se ordenan en forma lineal ya que no existe la posibilidad de pronunciar dos elementos a la vez. Estas combinaciones se denominan sintagmas.</li>
+                        <li><strong>Relaciones Paradigmáticas: </strong>Son las que se establecen entre unidades alternantes, es decir, entre los signos que podrían aparecer en un mismo lugar de un enunciado. Para que dos o más signos puedan alternar, esto es, ocupar el mismo puesto del mensaje, deben pertenecer a la misma categoría.</li>
                     </ul>
-                </div>
-                
+
                 <div class="content-images">
                     <h4>Esquemas y Diagramas</h4>
                     <div class="image-grid-flexible">
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📊 Diagrama 1</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📊 Diagrama 2</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📊 Diagrama 3</p>
-                        </div>
+                        <div class="image-upload-zone full-width"><img src="assets/images/obras/estructuralismo.webp" alt=""></div>
                     </div>
+                </div>
                 </div>
             </div>
         </section>
         
-        <!-- 2.1 Trabajos en Clase -->
+        <!-- ============================== -->
+        <!--   2.1  TRABAJOS EN CLASE       -->
+        <!-- ============================== -->
         <section class="content-section" id="trabajos-clase">
             <h2 class="section-title">Trabajos en Clase</h2>
             <p class="section-subtitle">Actividades y ejercicios realizados durante el curso</p>
-            
             <div class="content-body">
                 <div class="content-text">
                     <h3 class="content-heading">Ensayos y Análisis</h3>
                     <p>Colección de trabajos escritos durante las clases.</p>
                 </div>
-                
                 <div class="content-images">
                     <h4>Trabajos Destacados</h4>
                     <div class="image-grid-flexible">
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📝 Trabajo 1</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📝 Trabajo 2</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📝 Trabajo 3</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📝 Trabajo 4</p>
-                        </div>
+                        <div class="image-upload-zone"><p class="upload-text">📝 Trabajo 1</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📝 Trabajo 2</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📝 Trabajo 3</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📝 Trabajo 4</p></div>
                     </div>
                 </div>
-                
                 <div class="content-documents">
                     <h4>Trabajos subidos:</h4>
                     <div class="document-list">
                         <a href="assets/documents/docx/ensayo-1.docx" class="document-item">
-                            <span class="doc-icon">📝</span>
-                            <span class="doc-name">Ensayo Comparativo.docx</span>
+                            <span class="doc-icon">📝</span><span class="doc-name">Ensayo Comparativo.docx</span>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- 2.2 Investigación Personal -->
+        <!-- ============================== -->
+        <!--   2.2  INVESTIGACIÓN PERSONAL  -->
+        <!-- ============================== -->
         <section class="content-section" id="investigacion">
             <h2 class="section-title">Investigación Personal</h2>
             <p class="section-subtitle">Proyectos de investigación individual</p>
-            
             <div class="content-body">
                 <div class="content-text">
                     <h3 class="content-heading">Proyecto de Investigación</h3>
                     <p>Investigación profunda sobre un tema literario específico.</p>
                 </div>
-                
                 <div class="content-images">
                     <h4>Proceso de Investigación</h4>
                     <div class="image-grid-flexible">
-                        <div class="image-upload-zone">
-                            <p class="upload-text">🔬 Fase 1</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">🔬 Fase 2</p>
-                        </div>
-                        <div class="image-upload-zone full-width">
-                            <p class="upload-text">🔬 Resultados</p>
-                        </div>
+                        <div class="image-upload-zone"><p class="upload-text">🔬 Fase 1</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">🔬 Fase 2</p></div>
+                        <div class="image-upload-zone full-width"><p class="upload-text">🔬 Resultados</p></div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- 3.1.1 Obra Literaria 1 -->
+        <!-- ============================== -->
+        <!--   3.1.1  LA DIVINA COMEDIA     -->
+        <!-- ============================== -->
         <section class="content-section" id="literaria-1">
             <h2 class="section-title">La Divina Comedia</h2>
-            <p class="section-subtitle">Gabriel García Márquez - Análisis y reflexiones</p>
-            
+            <p class="section-subtitle">Dante Alighieri – Análisis y reflexiones</p>
             <div class="content-body">
                 <div class="content-text">
                     <h3 class="content-heading">Contexto Histórico y Literario</h3>
                     <p></p>
-                    
                     <h4>Temas principales:</h4>
                     <ul>
                         <li><strong>Soledad:</strong> Como condición existencial de los Buendía</li>
@@ -333,118 +298,85 @@
                         <li><strong>Realismo mágico:</strong> Fusión de lo real y lo fantástico</li>
                         <li><strong>Macondo:</strong> Microcosmos de América Latina</li>
                     </ul>
-                    
                     <h4>Personajes clave:</h4>
                     <p><strong>José Arcadio Buendía:</strong> Fundador de Macondo, obsesionado con la ciencia.</p>
                     <p><strong>Úrsula Iguarán:</strong> Matriarca que vive más de 100 años.</p>
                     <p><strong>Aureliano Buendía:</strong> Coronel que participa en 32 guerras civiles.</p>
                 </div>
-                
                 <div class="content-images">
                     <h4>Recursos Visuales</h4>
                     <div class="image-grid-flexible">
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📚 Portada</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">👥 Árbol genealógico</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📍 Mapa de Macondo</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">✍️ Citas importantes</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">🎨 Ilustraciones</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📖 Ediciones</p>
-                        </div>
-                        <div class="image-upload-zone full-width">
-                            <p class="upload-text">🖼️ Línea de tiempo narrativa</p>
-                        </div>
+                        <div class="image-upload-zone"><p class="upload-text">📚 Portada</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">👥 Árbol genealógico</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📍 Mapa de Macondo</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">✍️ Citas importantes</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">🎨 Ilustraciones</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📖 Ediciones</p></div>
+                        <div class="image-upload-zone full-width"><p class="upload-text">🖼️ Línea de tiempo narrativa</p></div>
                     </div>
                 </div>
-                
                 <div class="content-documents">
                     <h4>Análisis y recursos:</h4>
                     <div class="document-list">
                         <a href="assets/documents/pdf/analisis-cien-anos.pdf" class="document-item">
-                            <span class="doc-icon">📄</span>
-                            <span class="doc-name">Análisis Completo - Cien Años de Soledad.pdf</span>
+                            <span class="doc-icon">📄</span><span class="doc-name">Análisis Completo.pdf</span>
                         </a>
                         <a href="assets/documents/pdf/citas-importantes.pdf" class="document-item">
-                            <span class="doc-icon">📄</span>
-                            <span class="doc-name">Citas y Pasajes Importantes.pdf</span>
+                            <span class="doc-icon">📄</span><span class="doc-name">Citas y Pasajes Importantes.pdf</span>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- 3.1.2 Obra Literaria 2 -->
+        <!-- ============================== -->
+        <!--   3.1.2  HOMBRES EN ESCABECHE  -->
+        <!-- ============================== -->
         <section class="content-section" id="literaria-2">
             <h2 class="section-title">Hombres en Escabeche</h2>
-            <p class="section-subtitle">Federico García Lorca - Análisis dramático</p>
-            
+            <p class="section-subtitle">Análisis literario</p>
             <div class="content-body">
                 <div class="content-text">
-                    <h3 class="content-heading">descipcion</h3>
+                    <h3 class="content-heading">Descripción</h3>
                     <p>blablabla.</p>
-                    
                     <h4>Temas centrales:</h4>
                     <ul>
                         <li><strong>Represión:</strong> De la sexualidad, la libertad</li>
                         <li><strong>Honor:</strong> Obsesión por las apariencias</li>
-                        <li><strong>Autoridad:</strong> Bernarda como figura tiránica</li>
-                        <li><strong>Mujer:</strong> Condición femenina</li>
+                        <li><strong>Autoridad:</strong> Figura tiránica</li>
+                        <li><strong>Identidad:</strong> Condición humana</li>
                     </ul>
                 </div>
-                
                 <div class="content-images">
                     <h4>Material Visual</h4>
                     <div class="image-grid-flexible">
-                        <div class="image-upload-zone">
-                            <p class="upload-text">🎭 Portada</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">👥 Personajes</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">🏠 Escenografía</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📝 Análisis</p>
-                        </div>
+                        <div class="image-upload-zone"><p class="upload-text">🎭 Portada</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">👥 Personajes</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">🏠 Escenografía</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📝 Análisis</p></div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- 3.2.1 Obra No Literaria 1 -->
+        <!-- ============================== -->
+        <!--   3.2.1  LA GUERRA DEL FUEGO   -->
+        <!-- ============================== -->
         <section class="content-section" id="no-literaria-1">
             <h2 class="section-title">La Guerra del Fuego</h2>
             <p class="section-subtitle">(Quest for Fire, 1981), dirigida por Jean-Jacques Annaud.</p>
             
             <div class="content-body">
-            <div class="content-text">
+                <div class="content-text">
                     <h3 class="content-heading"><b>¿Cómo sustituye el cine prehistórico el lenguaje verbal por un sistema de signos no verbales?</b></h3>
                     <p>Es una película francesa sin diálogos que narra la odisea de una tribu prehistórica en busca del fuego, elemento vital para su supervivencia. Ambientada hace 80,000 años, la cinta usa un lenguaje corporal, ruidos primitivos y gestos para construir su narrativa. Ganadora del Premio César a Mejor Película y el Óscar a Mejor Maquillaje, es un ejemplo clave de obra no literaria por su uso del lenguaje visual, sonoro y simbólico como sistema de comunicación.</p>
+                </div>
                 <div class="content-images">
                     <div class="image-grid-flexible">
-                        <div class="image-upload-zone">
-                            <img src="assets/images/obras/poster_guerra.jpg" alt="">
-                        </div>
-                        <div class="image-upload-zone">
-                            <img src="assets/images/obras/LA-GUERRA-DEL-FUEGO-ANNAUD.png" alt="">
-                        </div>
-                        <div class="image-upload-zone">
-                            <img src="assets/images/obras/guerra_del_fuego.webp" alt="">
-                        </div>
-                        <div class="image-upload-zone">
-                            <img src="assets/images/obras/guerra_del_fuego.jpg" alt="">
-                        </div>
+                        <div class="image-upload-zone"><img src="assets/images/obras/poster_guerra.jpg" alt="Poster La Guerra del Fuego"></div>
+                        <div class="image-upload-zone"><img src="assets/images/obras/LA-GUERRA-DEL-FUEGO-ANNAUD.png" alt="La Guerra del Fuego Annaud"></div>
+                        <div class="image-upload-zone"><img src="assets/images/obras/guerra_del_fuego.webp" alt="Guerra del Fuego"></div>
+                        <div class="image-upload-zone"><img src="assets/images/obras/guerra_del_fuego.jpg" alt="Guerra del Fuego"></div>
                     </div>
                 </div>
             </div>
@@ -453,23 +385,24 @@
                 <div class="content-text">
                     <h3 class="content-heading"><b>Signos No Verbales según Umberto Eco:</b></h3>
                     <ul>
-                    <h4>Signos Icónicos:</h4>
+                        <h4>Signos Icónicos:</h4>
                         <li>El fuego como ícono por su representación directa de calor, luz y vida.</li>
-                        <li>Los mamuts como íconos de fuerza y peligro (semejanza visual con la caza).</li>
-                    <h4>Signos Índices:</h4>
+                        <li>Los mamuts como íconos de fuerza y peligro.</li>
+                        <h4>Signos Índices:</h4>
                         <li>El humo como índice de fuego (relación causa-efecto).</li>
                         <li>Las heridas como índices de violencia y supervivencia.</li>
-                    <h4>Signos Símbolos:</h4>
-                        <li>El fuego como símbolo de civilización, conocimiento y poder (convención cultural).</li>
+                        <h4>Signos Símbolos:</h4>
+                        <li>El fuego como símbolo de civilización, conocimiento y poder.</li>
                         <li>La risa de Ika (tribu avanzada) es símbolo de humanidad emergente.</li>
                     </ul>
-            </div>   
-        </div>
-        <div class="content-body">
-            <div class="content-text">
+                </div>
+            </div>
+
+            <div class="content-body">
+                <div class="content-text">
                     <h3 class="content-heading"><b>El Arquetipo del Héroe</b></h3>
                     <p>Camino del Héroe (Joseph Campbell)</p>
-                <h4>Signos No Verbales según Umberto Eco:</h4>
+                    <h4>Etapas del viaje:</h4>
                     <ul>
                         <li><b>Mundo Ordinario:</b> Tribu Ulam vive con fuego heredado.</li>
                         <li><b>Llamada a la Aventura:</b> Pierden el fuego y deben buscarlo.</li>
@@ -477,126 +410,197 @@
                         <li><b>Pruebas:</b> Ataque de lobos, mamuts, caníbales.</li>
                         <li><b>Gran Prueba:</b> Aprender a hacer fuego con Ika.</li>
                         <li><b>Recompensa:</b> Dominio del fuego.</li>
-                        <li><b>Retorno con el Elixir:</b> Regresan con fuego y conocimiento (Ika embarazada).</li>
+                        <li><b>Retorno con el Elixir:</b> Regresan con fuego y conocimiento.</li>
                     </ul>
                     <div class="content-images">
-                    <div class="image-grid-flexible">
-                        
-                        <div class="image-upload-zone full-width">
-                            <img src="assets/images/obras/etapas-viaje-heroe (1).jpg"">
+                        <div class="image-grid-flexible">
+                            <div class="image-upload-zone full-width"><img src="assets/images/obras/etapas-viaje-heroe (1).jpg" alt="Etapas del viaje del héroe"></div>
                         </div>
-             </div>
-        </div>
-                <p> </p>
-                    <i><b><p>La Guerra del Fuego es un ejemplo magistral de obra no literaria que utiliza la semiótica visual y corporal para narrar el origen de la civilización. Sin palabras, comunica ideas complejas sobre lenguaje, cultura y humanidad. En el IB, permite analizar cómo los signos no verbales construyen significado y cómo el fuego —como símbolo— marca el nacimiento del pensamiento humano.</p></i></b>
+                    </div>
+                    <p>&nbsp;</p>
+                    <p><i><b>La Guerra del Fuego es un ejemplo magistral de obra no literaria que utiliza la semiótica visual y corporal para narrar el origen de la civilización. Sin palabras, comunica ideas complejas sobre lenguaje, cultura y humanidad.</b></i></p>
                 </div>
-        
+            </div>
         </section>
         
-        <!-- 3.2.2 Obra No Literaria 2 -->
+        <!-- ============================== -->
+        <!--   3.2.2  SUEÑO EN OTRO IDIOMA  -->
+        <!-- ============================== -->
         <section class="content-section" id="no-literaria-2">
             <h2 class="section-title">Sueño en Otro Idioma</h2>
-            <p class="section-subtitle">Es una película mexicana de 2017 dirigida por Ernesto Contreras y escrita por Carlos Contreras.</p>
+            <p class="section-subtitle">Película mexicana de 2017, dirigida por Ernesto Contreras.</p>
             
             <div class="content-body">
                 <div class="content-text">
                     <h3 class="content-heading">¿Cómo la pérdida de un idioma como el zikril limita la comprensión de conceptos únicos en la cosmovisión indígena?</h3>
-                    <p>El zikril no es un mero código es el interpretante de una cosmovisión donde el lenguaje moldea la percepción del mundo del "Encanto". Su extinción genera un nuevo sentido: la lengua como límite del entendimiento humano, donde palabras únicas (ej.: términos para emociones o naturaleza) se pierden, restringiendo la realidad compartida.</p>
+                    <p>El zikril no es un mero código — es el interpretante de una cosmovisión donde el lenguaje moldea la percepción del mundo del "Encanto". Su extinción genera un nuevo sentido: la lengua como límite del entendimiento humano.</p>
+                </div>
                 <div class="content-images">
                     <div class="image-grid-flexible">
-                        <div class="image-upload-zone full-width">
-                            <img src="assets/images/obras/sueño_en_otro_idioma.jpeg" alt="">
-                        </div>
+                        <div class="image-upload-zone full-width"><img src="assets/images/obras/sueño_en_otro_idioma.jpeg" alt="Sueño en otro idioma"></div>
                     </div>
                 </div>
-                </div>
-                 <div class="content-body">
-            <div class="content-text">
-                    <h3 class="content-heading"><b>Lenguaje y Comunicación</b></h3>
-                <h4>Lengua vs. Habla (Saussure):</h4>
-                    <ul>
-                        <li><b>Lengua:</b>El zikril como sistema abstracto, con reglas únicas que encapsulan una cosmovisión (ej.: vocabulario para espíritus o relaciones humanas).</li>
-                        <li><b>Habla:</b> Actos concretos de Evaristo e Isauro, donde el silencio es un "habla" no verbal que limita la comunicación.</li>
-                    </ul>
-                <h4>Relaciones Sintagmáticas y Paradigmáticas:</h4>
-                    <ul>
-                        <li><b>Sintagmáticas</b>Secuencias en zikril (ej.: frases que combinan naturaleza y emociones, lineales pero cargadas de significado cultural).</li>
-                        <li><b>Paradigmáticas</b>Alternativas lingüísticas (zikril vs. español), donde elegir una lengua limita el paradigma de entendimiento (ej.: zikril permite expresar amor de formas no traducibles al español).</li>
-                    </ul>
-       
-                    <div class="content-images">
-                    <div class="image-grid-flexible">
-                        <div class="image-upload-zone">
-                            <img src="assets/images/obras/portada_sueño.jpg" alt="">
-                        </div>
-                        <div class="image-upload-zone">
-                            <img src="assets/images/obras/portada_sueño.webp" alt="">
-                        </div>
-                        <div class="image-upload-zone">
-                            <img src="assets/images/obras/si_te_quiero.jpeg" alt="">
-                        </div>
-                        <div class="image-upload-zone">
-                            <img src="assets/images/obras/silla_sueño.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
+           
 
-                    <p> </p>
-                    <i><b><p>Sueño en Otro Idioma es un ejemplo profundo de obra no literaria que usa el cine para explorar cómo el lenguaje, como cosmovisión, limita nuestro entendimiento del mundo. El zikril, en vías de extinción, simboliza la pérdida de perspectivas únicas, cuestionando la universalidad del conocimiento humano, invita a reflexionar sobre la diversidad lingüística y su rol en la representación cultural.</p></i></b>
-                    <p>Si el lenguaje moldea nuestra realidad, ¿qué mundos perdemos con cada idioma extinto?</p>
-               
-                </div>
-        
-            </div>
-
-            
-
-        </section>
-        
-        <!-- 4. Actividades Experienciales -->
-        <section class="content-section" id="actividades">
-            <h2 class="section-title">Actividades Experienciales</h2>
-            <p class="section-subtitle">Aprendizaje a través de la experiencia</p>
-            
             <div class="content-body">
                 <div class="content-text">
-                    <h3 class="content-heading">Proyectos CAS</h3>
-                    <p>Actividades que conectan el estudio de la lengua con la comunidad.</p>
+                    <h3 class="content-heading"><b>Lenguaje y Comunicación</b></h3>
+                    <h4>Lengua vs. Habla (Saussure):</h4>
+                    <ul>
+                        <li><b>Lengua:</b> El zikril como sistema abstracto con reglas únicas que encapsulan una cosmovisión.</li>
+                        <li><b>Habla:</b> Actos concretos de Evaristo e Isauro, donde el silencio es un "habla" no verbal.</li>
+                    </ul>
+                    <h4>Relaciones Sintagmáticas y Paradigmáticas:</h4>
+                    <ul>
+                        <li><b>Sintagmáticas:</b> Secuencias en zikril cargadas de significado cultural.</li>
+                        <li><b>Paradigmáticas:</b> Alternativas lingüísticas (zikril vs. español).</li>
+                    </ul>
+                    <div class="content-images">
+                        <div class="image-grid-flexible">
+                            <div class="image-upload-zone"><img src="assets/images/obras/portada_sueño.jpg" alt="Portada Sueño"></div>
+                            <div class="image-upload-zone"><img src="assets/images/obras/portada_sueño.webp" alt="Portada Sueño webp"></div>
+                            <div class="image-upload-zone"><img src="assets/images/obras/si_te_quiero.jpeg" alt="Si te quiero"></div>
+                            <div class="image-upload-zone"><img src="assets/images/obras/silla_sueño.jpg" alt="Silla Sueño"></div>
+                        </div>
+                    </div>
+                    <p></p>
+                    <p><i><b>Sueño en Otro Idioma es un ejemplo profundo de obra no literaria que usa el cine para explorar cómo el lenguaje, como cosmovisión, limita nuestro entendimiento del mundo.</b></i></p>
+                    <p>Si el lenguaje moldea nuestra realidad, ¿qué mundos perdemos con cada idioma extinto?</p>
                 </div>
-                
+            </div>
+            </div>
+        </section>
+
+        <!-- ============================== -->
+        <!--   4.1  ACTIVIDAD EXPERIENCIAL 1 -->
+        <!-- ============================== -->
+        <section class="content-section" id="actividad-1">
+            <h2 class="section-title">Actividad Experiencial 1</h2>
+            <p class="section-subtitle">Descripción y reflexión de la actividad</p>
+            <div class="content-body">
+                <div class="content-text">
+                    <h3 class="content-heading">Descripción de la Actividad</h3>
+                    <p>[Escribe aquí la descripción de la actividad experiencial 1]</p>
+                    <h4>Objetivos:</h4>
+                    <ul>
+                        <li>Objetivo 1</li>
+                        <li>Objetivo 2</li>
+                        <li>Objetivo 3</li>
+                    </ul>
+                    <h4>Reflexión:</h4>
+                    <p>[Escribe aquí tu reflexión sobre la actividad]</p>
+                </div>
                 <div class="content-images">
-                    <h4>Galería de Actividades</h4>
+                    <h4>Registro Fotográfico</h4>
                     <div class="image-grid-flexible">
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📸 Actividad 1</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📸 Actividad 2</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📸 Actividad 3</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">🎨 Proyecto creativo</p>
-                        </div>
-                        <div class="image-upload-zone full-width">
-                            <p class="upload-text">🎭 Evento cultural</p>
-                        </div>
+                        <div class="image-upload-zone"><p class="upload-text">📸 Foto 1</p><p class="upload-hint">Arrastra imagen aquí</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📸 Foto 2</p><p class="upload-hint">Arrastra imagen aquí</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📸 Foto 3</p><p class="upload-hint">Arrastra imagen aquí</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📸 Foto 4</p><p class="upload-hint">Arrastra imagen aquí</p></div>
+                        <div class="image-upload-zone full-width"><p class="upload-text">🖼️ Imagen principal / Banner</p></div>
+                    </div>
+                </div>
+                <div class="content-documents">
+                    <h4>Documentos:</h4>
+                    <div class="document-list">
+                        <a href="assets/documents/pdf/actividad-1.pdf" class="document-item" target="_blank">
+                            <span class="doc-icon">📄</span><span class="doc-name">Reflexión Actividad 1.pdf</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================== -->
+        <!--   4.2  ACTIVIDAD EXPERIENCIAL 2 -->
+        <!-- ============================== -->
+        <section class="content-section" id="actividad-2">
+            <h2 class="section-title">Actividad Experiencial 2</h2>
+            <p class="section-subtitle">Descripción y reflexión de la actividad</p>
+            <div class="content-body">
+                <div class="content-text">
+                    <h3 class="content-heading">Descripción de la Actividad</h3>
+                    <p>[Escribe aquí la descripción de la actividad experiencial 2]</p>
+                    <h4>Objetivos:</h4>
+                    <ul>
+                        <li>Objetivo 1</li>
+                        <li>Objetivo 2</li>
+                        <li>Objetivo 3</li>
+                    </ul>
+                    <h4>Reflexión:</h4>
+                    <p>[Escribe aquí tu reflexión sobre la actividad]</p>
+                </div>
+                <div class="content-images">
+                    <h4>Registro Fotográfico</h4>
+                    <div class="image-grid-flexible">
+                        <div class="image-upload-zone"><p class="upload-text">📸 Foto 1</p><p class="upload-hint">Arrastra imagen aquí</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📸 Foto 2</p><p class="upload-hint">Arrastra imagen aquí</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📸 Foto 3</p><p class="upload-hint">Arrastra imagen aquí</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📸 Foto 4</p><p class="upload-hint">Arrastra imagen aquí</p></div>
+                        <div class="image-upload-zone full-width"><p class="upload-text">🖼️ Imagen principal / Banner</p></div>
+                    </div>
+                </div>
+                <div class="content-documents">
+                    <h4>Documentos:</h4>
+                    <div class="document-list">
+                        <a href="assets/documents/pdf/actividad-2.pdf" class="document-item" target="_blank">
+                            <span class="doc-icon">📄</span><span class="doc-name">Reflexión Actividad 2.pdf</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================== -->
+        <!--   4.3  ACTIVIDAD EXPERIENCIAL 3 -->
+        <!-- ============================== -->
+        <section class="content-section" id="actividad-3">
+            <h2 class="section-title">Actividad Experiencial 3</h2>
+            <p class="section-subtitle">Descripción y reflexión de la actividad</p>
+            <div class="content-body">
+                <div class="content-text">
+                    <h3 class="content-heading">Descripción de la Actividad</h3>
+                    <p>[Escribe aquí la descripción de la actividad experiencial 3]</p>
+                    <h4>Objetivos:</h4>
+                    <ul>
+                        <li>Objetivo 1</li>
+                        <li>Objetivo 2</li>
+                        <li>Objetivo 3</li>
+                    </ul>
+                    <h4>Reflexión:</h4>
+                    <p>[Escribe aquí tu reflexión sobre la actividad]</p>
+                </div>
+                <div class="content-images">
+                    <h4>Registro Fotográfico</h4>
+                    <div class="image-grid-flexible">
+                        <div class="image-upload-zone"><p class="upload-text">📸 Foto 1</p><p class="upload-hint">Arrastra imagen aquí</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📸 Foto 2</p><p class="upload-hint">Arrastra imagen aquí</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📸 Foto 3</p><p class="upload-hint">Arrastra imagen aquí</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📸 Foto 4</p><p class="upload-hint">Arrastra imagen aquí</p></div>
+                        <div class="image-upload-zone full-width"><p class="upload-text">🖼️ Imagen principal / Banner</p></div>
+                    </div>
+                </div>
+                <div class="content-documents">
+                    <h4>Documentos:</h4>
+                    <div class="document-list">
+                        <a href="assets/documents/pdf/actividad-3.pdf" class="document-item" target="_blank">
+                            <span class="doc-icon">📄</span><span class="doc-name">Reflexión Actividad 3.pdf</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- 5. Extended Essay -->
+        <!-- ============================== -->
+        <!--   5   EXTENDED ESSAY           -->
+        <!-- ============================== -->
         <section class="content-section" id="extended-essay">
             <h2 class="section-title">Extended Essay</h2>
             <p class="section-subtitle">Monografía de investigación</p>
-            
             <div class="content-body">
                 <div class="content-text">
                     <h3 class="content-heading">Pregunta de Investigación</h3>
                     <p>[Escribe aquí tu pregunta de investigación]</p>
-                    
                     <h4>Estructura:</h4>
                     <ul>
                         <li>Introducción</li>
@@ -606,108 +610,111 @@
                         <li>Bibliografía</li>
                     </ul>
                 </div>
-                
                 <div class="content-images">
                     <h4>Proceso de Investigación</h4>
                     <div class="image-grid-flexible">
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📋 Planificación</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">📚 Fuentes</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">✍️ Borradores</p>
-                        </div>
+                        <div class="image-upload-zone"><p class="upload-text">📋 Planificación</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">📚 Fuentes</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">✍️ Borradores</p></div>
                     </div>
                 </div>
-                
                 <div class="content-documents">
                     <h4>Versiones del ensayo:</h4>
                     <div class="document-list">
                         <a href="assets/documents/docx/ee-borrador.docx" class="document-item">
-                            <span class="doc-icon">📝</span>
-                            <span class="doc-name">Extended Essay - Borrador.docx</span>
+                            <span class="doc-icon">📝</span><span class="doc-name">Extended Essay - Borrador.docx</span>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- 6. Exposiciones Orales -->
-        <section class="content-section" id="exposiciones">
-            <h2 class="section-title">Exposiciones Orales</h2>
-            <p class="section-subtitle">Presentaciones y evaluaciones orales</p>
-            
+        <!-- ======================================== -->
+        <!--   6.1  ORAL — LA GUERRA DEL FUEGO        -->
+        <!-- ======================================== -->
+        <section class="content-section" id="exposicion-1">
+            <h2 class="section-title">Oral: La Guerra del Fuego</h2>
+            <p class="section-subtitle">Exposición oral individual sobre obra no literaria</p>
             <div class="content-body">
                 <div class="content-text">
                     <h3 class="content-heading">Oral La Guerra del Fuego</h3>
-                    <p>Análisis oral de obras literarias y no literarias.</p>
+                    <p>Análisis oral de obra no literaria: La Guerra del Fuego (Quest for Fire, 1981).</p>
+                    <h4>Aspectos analizados:</h4>
+                    <ul>
+                        <li>Semiótica visual y signos no verbales</li>
+                        <li>El arquetipo del héroe de Joseph Campbell</li>
+                        <li>El fuego como símbolo de civilización</li>
+                        <li>Lenguaje corporal como sistema comunicativo</li>
+                    </ul>
                 </div>
-                
                 <div class="content-images">
                     <h4>Material de Presentación</h4>
                     <div class="image-grid-flexible">
-                        <div class="image-upload-zone">
-                            <p class="upload-text">🎤 Diapositiva 1</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">🎤 Diapositiva 2</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">🎤 Diapositiva 3</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">🎤 Diapositiva 4</p>
-                        </div>
+                        <div class="image-upload-zone"><p class="upload-text">🎤 Diapositiva 1</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">🎤 Diapositiva 2</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">🎤 Diapositiva 3</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">🎤 Diapositiva 4</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">🎤 Diapositiva 5</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">🎤 Diapositiva 6</p></div>
+                        <div class="image-upload-zone full-width"><p class="upload-text">🖼️ Slide de cierre / conclusión</p></div>
                     </div>
                 </div>
-                
                 <div class="content-documents">
                     <h4>Materiales:</h4>
                     <div class="document-list">
-                        <a href="assets/documents/pdf/guion-oral.pdf" class="document-item">
-                            <span class="doc-icon">📄</span>
-                            <span class="doc-name">Guión Exposición Oral.pdf</span>
+                        <a href="assets/documents/pdf/guion-oral-guerra-fuego.pdf" class="document-item">
+                            <span class="doc-icon">📄</span><span class="doc-name">Guión – La Guerra del Fuego.pdf</span>
                         </a>
-                    </div>
-                </div>
-
-                            <div class="content-body">
-                <div class="content-text">
-                    <h3 class="content-heading">Exposicion del Latin al Italiano</h3>
-                    <p>Análisis oral de obras literarias y no literarias.</p>
-                </div>
-                
-                <div class="content-images">
-                    <h4>Material de Presentación</h4>
-                    <div class="image-grid-flexible">
-                        <div class="image-upload-zone">
-                            <p class="upload-text">🎤 Diapositiva 1</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">🎤 Diapositiva 2</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">🎤 Diapositiva 3</p>
-                        </div>
-                        <div class="image-upload-zone">
-                            <p class="upload-text">🎤 Diapositiva 4</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="content-documents">
-                    <h4>Materiales:</h4>
-                    <div class="document-list">
-                        <a href="assets/documents/pdf/guion-oral.pdf" class="document-item">
-                            <span class="doc-icon">📄</span>
-                            <span class="doc-name">Guión Exposición Oral.pdf</span>
+                        <a href="assets/documents/pdf/presentacion-guerra-fuego.pdf" class="document-item">
+                            <span class="doc-icon">📊</span><span class="doc-name">Presentación – La Guerra del Fuego.pdf</span>
                         </a>
                     </div>
                 </div>
             </div>
+        </section>
 
+        <!-- ======================================== -->
+        <!--   6.2  ORAL — DEL LATIN AL ITALIANO      -->
+        <!-- ======================================== -->
+        <section class="content-section" id="exposicion-2">
+            <h2 class="section-title">Oral: Del Latin al Italiano</h2>
+            <p class="section-subtitle">Exposición oral sobre evolución lingüística</p>
+            <div class="content-body">
+                <div class="content-text">
+                    <h3 class="content-heading">Exposición del Latin al Italiano</h3>
+                    <p>Análisis oral sobre la evolución del latín al italiano y su impacto en la literatura y el lenguaje.</p>
+                    <h4>Aspectos analizados:</h4>
+                    <ul>
+                        <li>Evolución fonética del latín</li>
+                        <li>Transformaciones gramaticales</li>
+                        <li>Influencias culturales en la lengua</li>
+                        <li>Conexión con La Divina Comedia de Dante</li>
+                    </ul>
+                </div>
+                <div class="content-images">
+                    <h4>Material de Presentación</h4>
+                    <div class="image-grid-flexible">
+                        <div class="image-upload-zone"><p class="upload-text">🎤 Diapositiva 1</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">🎤 Diapositiva 2</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">🎤 Diapositiva 3</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">🎤 Diapositiva 4</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">🎤 Diapositiva 5</p></div>
+                        <div class="image-upload-zone"><p class="upload-text">🎤 Diapositiva 6</p></div>
+                        <div class="image-upload-zone full-width"><p class="upload-text">🖼️ Slide de cierre / conclusión</p></div>
+                    </div>
+                </div>
+                <div class="content-documents">
+                    <h4>Materiales:</h4>
+                    <div class="document-list">
+                        <a href="assets/documents/pdf/guion-latin-italiano.pdf" class="document-item">
+                            <span class="doc-icon">📄</span><span class="doc-name">Guión – Del Latin al Italiano.pdf</span>
+                        </a>
+                        <a href="assets/documents/pdf/presentacion-latin-italiano.pdf" class="document-item">
+                            <span class="doc-icon">📊</span><span class="doc-name">Presentación – Del Latin al Italiano.pdf</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
         
     </main>
