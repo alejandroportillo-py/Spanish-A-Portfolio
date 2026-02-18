@@ -835,3 +835,96 @@ body {
 .sidebar::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.3);
 }
+
+/* ============================== */
+/*   TRABAJO ITEM (IMAGEN + TEXTO) - VERSIÓN MEJORADA */
+/* ============================== */
+.trabajo-item {
+    display: grid;
+    grid-template-columns: minmax(250px, 20%) 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--color-beige-light);
+    border-radius: 12px;
+    border-left: 4px solid var(--color-green);
+    animation: slideInLeft 0.6s ease-out;
+    align-items: start; /* Alinea ambos elementos al inicio */
+}
+
+.trabajo-image {
+    width: 100%;
+    max-height: 100%; /* Permite que se adapte al contenedor */
+    display: flex;
+    align-items: flex-start;
+}
+
+.trabajo-image img {
+    width: 100%;
+    height: auto; /* Mantiene proporción */
+    max-height: 500px; /* Límite máximo de altura */
+    object-fit: contain; /* Mantiene la proporción sin recortar */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.trabajo-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.trabajo-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.trabajo-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--color-dark);
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.trabajo-content p {
+    color: var(--color-gray);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.trabajo-content ol,
+.trabajo-content ul {
+    margin-left: 1.5rem;
+    color: var(--color-gray);
+    line-height: 1.8;
+}
+
+.trabajo-content ol li,
+.trabajo-content ul li {
+    margin-bottom: 0.8rem;
+}
+
+/* Responsive para trabajos */
+@media (max-width: 900px) {
+    .trabajo-item {
+        grid-template-columns: minmax(200px, 30%) 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .trabajo-item {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+    
+    .trabajo-image img {
+        max-width: 100px;
+
+
+    }
+}
