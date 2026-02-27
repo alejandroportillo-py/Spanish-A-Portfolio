@@ -69,3 +69,4 @@ document.addEventListener('keydown', (e) => {
         sidebar.classList.remove('open');
     }
 });
+
