@@ -175,3 +175,117 @@
         rotationSpeed = 0.003;
     });
 })();
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.document-item').forEach((item, i) => {
+    const href = item.getAttribute('href');
+    const name = item.querySelector('.doc-name').textContent;
+    const type = item.dataset.type || 'pdf';
+    const color = type === 'pdf' ? '#e24b4a' : '#378add';
+    const label = type.toUpperCase() + ' · haz clic para previsualizar';
+
+    // Reconstruir el interior del <a>
+    item.innerHTML = `
+      <div class="doc-header collapsed" id="dh-${i}">
+        <div class="doc-icon-wrap ${type}">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="1" width="9" height="12" rx="1.5" fill="${color}" opacity="0.2"/>
+            <rect x="2" y="1" width="9" height="12" rx="1.5" stroke="${color}" stroke-width="1"/>
+            <path d="M8 1v3.5A1 1 0 009 5.5h3" stroke="${color}" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="doc-meta">
+          <div class="doc-name-text">${name}</div>
+          <div class="doc-type-label">${label}</div>
+        </div>
+        <button class="toggle-btn" aria-label="Previsualizar">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="toggle-icon" id="chev-${i}">
+            <path d="M2 4l4 4 4-4" stroke="#888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="doc-preview" id="dp-${i}">
+        <iframe id="df-${i}" src="" title="${name}"></iframe>
+        <a class="doc-open-link" href="${href}" target="_blank">↗ Abrir documento completo</a>
+      </div>`;
+
+    // Bloquear el <a> para que no navegue al hacer clic en el header
+    item.removeAttribute('href');
+
+    const header = item.querySelector(`#dh-${i}`);
+    const preview = item.querySelector(`#dp-${i}`);
+    const frame   = item.querySelector(`#df-${i}`);
+    const chev    = item.querySelector(`#chev-${i}`);
+    let loaded = false;
+
+    header.addEventListener('click', () => {
+      const isOpen = preview.classList.contains('open');
+      if (!isOpen) {
+        if (!loaded) { frame.src = href; loaded = true; }
+        preview.classList.add('open');
+        header.classList.remove('collapsed');
+        chev.classList.add('open');
+      } else {
+        preview.classList.remove('open');
+        header.classList.add('collapsed');
+        chev.classList.remove('open');
+      }
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Crear modal una sola vez
+  const overlay = document.createElement('div');
+  overlay.className = 'video-modal-overlay';
+  overlay.innerHTML = `
+    <div class="video-modal-box">
+      <button class="video-modal-close" id="videoModalClose">✕</button>
+      <iframe id="videoModalFrame" src="" allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+      </iframe>
+    </div>`;
+  document.body.appendChild(overlay);
+
+  const frame = document.getElementById('videoModalFrame');
+
+  // Cerrar al hacer clic fuera o en el botón
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeModal();
+  });
+  document.getElementById('videoModalClose').addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  function closeModal() {
+    overlay.classList.remove('active');
+    frame.src = '';
+  }
+
+  // Construir cada tarjeta de video
+  document.querySelectorAll('.video-item').forEach(item => {
+    const id    = item.dataset.videoId;
+    const title = item.dataset.title || '';
+    const thumb = `https://img.youtube.com/vi/${id}/mqdefault.jpg`;
+
+    item.innerHTML = `
+      <div class="video-thumb-wrap">
+        <img src="${thumb}" alt="${title}" loading="lazy">
+        <div class="play-btn">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="22" r="22" fill="rgba(0,0,0,0.55)"/>
+            <polygon points="17,13 35,22 17,31" fill="white"/>
+          </svg>
+        </div>
+      </div>
+      <div class="video-caption">${title}</div>`;
+
+    item.addEventListener('click', () => {
+      frame.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+      overlay.classList.add('active');
+    });
+  });
+
+});
